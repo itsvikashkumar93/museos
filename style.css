@@ -1,11 +1,11 @@
 @font-face {
     font-family: "font1";
-    src: url(./fonts/untitled-serif-regular.ttf);
+    src: url(./fonts/untitled-serif-regular.woff2);
 }
 
 @font-face {
     font-family: "font2";
-    src: url(./fonts/untitled-sans-medium.ttf);
+    src: url(./fonts/untitled-sans-medium.woff2);
 }
 
 * {

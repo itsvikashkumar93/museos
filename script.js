@@ -49,33 +49,37 @@ function loadingAnimation() {
     tl.to("#loader", {
         y: "-100vh",
         // opacity: 0.3,
-        duration: 1.2,
+        duration: 1.3,
         ease: "power1.inOut",
-        delay: 0.3,
+        delay: 0.4,
+    })
+    tl.to("#loader", {
         display: "none"
     })
-
-    tl.from("#main", {
-        opacity: 0
-    })
+    // tl.from("#main", {
+    //     opacity: 0
+    // })
 
     tl.from("#page1-container h1", {
-        y: 120,
-        duration: 1
+        y: 124,
+        duration: 0.9
     })
 
-    gsap.from("#nav h4", {
-        y: -50,
-        duration: 0.5,
-        delay: 2
-        // stagger: 1
+    tl.from("#nav h4", {
+        y: -42,
+        duration: 0.5
     })
 
     gsap.from("#page1-img-container", {
         opacity: 0,
-        delay: 2.3,
-        duration: 1
+        delay: 3,
+        duration: 1.3
     })
+
+}
+
+
+function gsapWithScroll() {
 
     gsap.to("#page1-img-container img", {
         scale: 1,
@@ -89,19 +93,15 @@ function loadingAnimation() {
         }
     })
 
-}
-
-
-function gsapWithScroll() {
-    gsap.to("#page6 img", {
+    gsap.to("#page6-img img", {
         scale: 1.5,
-        scrollTrigger:{
-            trigger: "#page6 img",
+        scrollTrigger: {
+            trigger: "#page6-img img",
             scroller: "#main",
-            markers: true,
-            start: "top 60%",
-            end: "top 25%",
-            scrub: 2
+            // markers: true,
+            start: "top 140%",
+            end: "top 90%",
+            scrub: 1
         }
     })
 }
